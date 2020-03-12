@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>First Web Page</title>
+        <style>
+            body{
+             font-family: Calibri, "Helvetica Neue", Helvetica, sans-serif;
+             background-color:aquamarine;
+            }
+            
+             div.Container{
+                margin-left:30px;
+                margin-top:20px;
+                margin-right:30px;
+             }                       
+            #header-main{
+                text-align: center;
+                background-color: blue;
+            }
+            .navbar-main{
+                list-style-type: none;
+                background-color: brown;
+                font: size 1.5em;
+                
+            }
+            .navbar-item{
+                display: inline-block;
+                width: 100px;
+                padding: 10px 0;
+                margin-left: 10vw;
+                
+            }
+            span.bold{
+                font-weight: bold;
+            }
+            .standard-paragraph{
+                margin-left: 8%;
+                margin-right:8%;
+            }
+            .standard-paragraph{
+                margin:8vw;
+            }
+            form{
+                margin: 7vh 7vw;
+            }
+            .form-question{
+            display: inline-block;
+            width:25vw;
+            }
+            button{
+                margin:4vh 0;
+                margin-left: 5vw;
+               
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div class="Container">
+            <ul class="navbar-main">
+              <a href="index02.html"><li class = "navbar-item">Home</li></a>
+              <a href="about.html"><li class = "navbar-item">About</li></a>
+              <a href="contact.html"><li class = "navbar-item">Contact</li></a>
+            </ul>
+            <h1 id="header-main"> My First Webpage</h1>
+            <form onsubmit="checkInputDetails()">
+                <span class="form-question">Please enter your name</span>
+                <input type = "text" required placeholder="FirstName LastName"/>
+                <span class="form-question">Please enter your age</span>
+                <input type="number" id="contact-age" min="0" required/>
+                <button type = "submit" value="submit">submit</button>
+            </form>
+            
+        </div>
+<script>
+function checkInputDetails(){
+    let contactName = document.getElementById('contact-name').value
+    let contactAge=document.getElementById('contact-age').value
+    let yearsUntilAge18 = 18-contactAge
+    alert(`Thank you for your submiussion. your name is ${contactName} and your age is ${contactAge} which means that you have ${yearsUntilAge18} years before you are 18`)
+}
+</script>
+    </body>
